@@ -1,0 +1,32 @@
+.nav 
+  display: inline-block
+  padding-top: 7px
+  vertical-align: top
+  margin-right: 15px
+
+  &__link 
+    display: inline-block
+    vertical-align: top
+    padding: 10px
+    font-family: serif
+    text-decoration: none
+    text-transform: capitalize
+    color: #424242
+    transition: .3s
+
+    &:hover,
+    &-active
+      color: #de2b24
+
+    &:after
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 5px
+      height: 5px
+      margin-left: 15px
+      border-radius: 50%
+      background-color: #424242
+
+    &:last-child:after
+      display: none
