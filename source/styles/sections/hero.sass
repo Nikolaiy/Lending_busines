@@ -7,6 +7,7 @@
     background-image: url(../../images/hero-bg.jpg) 
     background-size: cover
     background-repeat: no-repeat
+    background-position: center
 
     &__about
         font-family: bold
@@ -17,6 +18,10 @@
         margin-top: 0
         margin-bottom: 27px
         font-family: $ff-main-light
+
+    @media (max-width: 600px)
+        padding: 100px 20px
+        min-height: inherit
 
     .button-text-uppercase 
         padding: 21px 41px

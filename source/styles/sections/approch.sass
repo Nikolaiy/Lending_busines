@@ -2,6 +2,10 @@
     padding: 86px 0 94px
     background-color: #f3f3f3
 
+    @media (max-width: 980px)
+        padding-top: 20px
+        padding-bottom: 20px
+
     &__list
         margin: 0
         padding: 0
@@ -9,6 +13,7 @@
 
     &__item 
         display: flex
+        flex-wrap: wrap
         margin-bottom: 40px
         border-radius: 5px
         box-shadow: -1px -1px 10px 1px rgba(214, 214, 214, 1)
@@ -19,18 +24,23 @@
             flex-direction: row-reverse
             text-align: right
 
-            .approch__text
-                padding: 70px 90px
-
             .approch__step
                 right: auto
-                left: -58px
+                left: -58px 
 
     &__image
         position: relative
         max-width: 340px
         max-height: 236px
         vertical-align: top
+
+        @media (max-width: 980px)
+            max-width: calc(340px / 1.5)
+            max-height: calc(236px / 1.5)
+
+        @media (max-width: 700px)
+                display: block
+                margin: auto
 
     &__picture 
         display: block
@@ -42,6 +52,13 @@
         width: 64%
         padding: 70px 70px 55px 90px
         font-size: .875rem
+
+        @media (max-width: 980px)
+            padding: 25px 20px
+
+        @media (max-width: 700px)
+            width: 100%
+            text-align: center
 
     &__step 
         +centerer-y()
@@ -64,6 +81,9 @@
             font-family: $ff-steps
             line-height: 1
             color: #ffffff
+
+        @media (max-width: 980px)
+            display: none
 
     &__title
         padding-bottom: 6px
